@@ -20,7 +20,8 @@ export class CalculatriceComponent {
 
   calculate() {
     try {
-      this.display = eval(this.display).toString();
+      this.display = eval(this.display).toString();//eval() takes a string and executes it as JavaScript code.
+      //So if this.display contains "2+3*4", eval will compute the result 14
     } catch (e) {
       this.display = 'Erreur';
     }
