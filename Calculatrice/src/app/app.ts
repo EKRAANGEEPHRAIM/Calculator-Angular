@@ -1,13 +1,40 @@
 import { Component, signal } from '@angular/core';
+import { KeyTouch } from '../key-touch/key-touch';
 
-import { CalculatriceComponent } from '../calculatrice-component/calculatrice-component';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [CalculatriceComponent],
+  imports: [
+  KeyTouch
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  
+display: string = '';
+
+press(key: string) {
+    this.display += key;
+  }
+
+  clear() {
+    this.display = '';
+  }
+
+  calculate() {
+    try {
+      this.display = eval(this.display).toString(); 
+      // eval prend une string et exécute l'expression dedans
+    } catch (e) {
+      this.display = 'Erreur';
+    }
+  }
+
+
+
+
 }
+
+ 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalculatriceComponent } from './calculatrice-component';
+import { KeyTouch } from './key-touch';
 
-describe('CalculatriceComponent', () => {
-  let component: CalculatriceComponent;
-  let fixture: ComponentFixture<CalculatriceComponent>;
+describe('KeyTouch', () => {
+  let component: KeyTouch;
+  let fixture: ComponentFixture<KeyTouch>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CalculatriceComponent]
+      imports: [KeyTouch]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CalculatriceComponent);
+    fixture = TestBed.createComponent(KeyTouch);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

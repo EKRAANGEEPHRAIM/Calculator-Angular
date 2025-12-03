@@ -1,0 +1,26 @@
+<div class="calculator">
+<div class="keypad">
+
+@for(touch of touchs ; track $index) {
+@for(k of touch ; track $index){
+                <button
+                class="key
+            {{ k === '/' || k === '*' || k === '-' || k === '+' ? 'op' : '' }}
+            {{ k === '=' ? 'equal' : '' }}
+            {{ k === 'C' ? 'clear' : '' }}
+                "
+                (click)="PressTo(k)"
+                >
+
+            {{k}}
+            </button>
+            }
+        
+
+    }
+
+
+</div>
+
+</div>
+

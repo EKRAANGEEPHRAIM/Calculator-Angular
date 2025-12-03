@@ -1,1 +1,15 @@
-<app-calculatrice-component></app-calculatrice-component>
+
+<div class="calculator">
+
+    <div class="screen">
+        {{display || '0'}}
+    </div>
+</div>
+
+<app-key-touch 
+[affiche] = "display"
+(touchPress)="press($event)"
+(clearPress)="clear()"
+(egalPress)="calculate()"
+
+></app-key-touch>

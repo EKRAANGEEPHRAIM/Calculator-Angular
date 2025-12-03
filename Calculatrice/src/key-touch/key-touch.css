@@ -1,0 +1,42 @@
+.calculator {
+  width: 260px;
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 20px;
+  background: #222;
+  color: white;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: 0.2s;
+}
+
+.key:hover {
+  background: #444;
+}
+
+.key.op {
+  background: #f39c12;
+}
+
+.key.equal {
+  background: #27ae60;
+}
+
+.key.clear {
+  grid-column: span 4;
+  background: #c0392b;
+}
